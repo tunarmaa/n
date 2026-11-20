@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Справочник пользователей</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Справочник пользователей</h1>
+    <p>Данные загружаются из публичного REST API JSONPlaceholder</p>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <button id="loadBtn" class="btn btn-primary" type="button">Загрузить пользователей</button>
+
+      <div class="search">
+        <label for="searchInput">Поиск по имени</label>
+        <input id="searchInput" type="text" placeholder="Например: Leanne" autocomplete="off">
+      </div>
+    </section>
+
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+
+    <div class="columns">
+      <section class="panel">
+        <h2>Пользователи</h2>
+        <div id="usersList" class="users-list"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Публикации</h2>
+        <div id="postsStatus" class="status" role="status" aria-live="polite"></div>
+        <div id="postsList" class="posts-list">
+          <p class="hint">Нажмите «Показать публикации» у нужного пользователя.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
